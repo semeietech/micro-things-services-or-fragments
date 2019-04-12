@@ -99,4 +99,10 @@ não necessariamente :grin:
 
 ### 26 - jeffotoni/GoLambdaMan | @jeffotoni at 10:21 pm
 @AlexandreSilvaDev Nem vou colocar minha opinião só vou referenciar a do Chris Richardson que por sinal descreveu muito bem sobre este assunto aqui..
+
+### 27 - jeffotoni/GoLambdaMan | @jeffotoni at 10:23 pm
+![anexo com citação](./files/anexo-27.jpeg)
+
+
+### 27 - jeffotoni/GoLambdaMan | @jeffotoni at 10:23 pm
 ![anexo com citação](./files/anexo-26.jpeg)
