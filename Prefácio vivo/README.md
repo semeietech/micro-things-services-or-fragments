@@ -101,8 +101,30 @@ não necessariamente :grin:
 @AlexandreSilvaDev Nem vou colocar minha opinião só vou referenciar a do Chris Richardson que por sinal descreveu muito bem sobre este assunto aqui..
 
 ### 27 - jeffotoni/GoLambdaMan | @jeffotoni at 10:23 pm
+
 ![anexo com citação](./files/anexo-27.jpeg)
 
 
-### 27 - jeffotoni/GoLambdaMan | @jeffotoni at 10:23 pm
-![anexo com citação](./files/anexo-26.jpeg)
+### 28 - jeffotoni/GoLambdaMan | @jeffotoni at 10:24 pm
+
+![anexo com citação](./files/anexo-28.jpeg)
+
+### 29 - jeffotoni/GoLambdaMan | @jeffotoni at 10:24 pm
+:point_up_2: este texto é a referência que o colega Danilo  postou acima..
+Super apoio o que ele disse e descreveu em seus posts.
+
+### 30 -  Danilo Breda | @github.com/danilobreda at 10:29 pm
+Eu faço assim, uma única instancia fisica de banco de dados, com cada api seu database, estou suscetível a uma falha gigantesca? Sim! Pois tenho uma único ponto de falha. Um dos motivos de microservices é disponibilidade, entao acredito que seja importante mas nao viavel em alguns casos por ser caro mesmo
+
+### 31 - reply(25) - Luiz Carlos Faria | @luizcarlosfaria at 10:34 pm
+Estou me referindo ao compartilhamento de objetos, pra ser mais pragmático: tabelas...
+Se há compartilhamento de tabelas, não há microserviço
+
+### 32 - Luiz Carlos Faria | @luizcarlosfaria at 10:35 pm
+Segregação física e lógica, é outro assunto.
+
+
+### 33 - reply(30) - jeffotoni/GoLambdaMan | @jeffotoni at 10:49 pm
+entendo, é uma das formas de construir.
+
+
