@@ -6,17 +6,17 @@ A proposta do prefácil é proporcionar o conteudo das discuções com o maximo 
 ## Conversa: Domingo, 7 de Abril de 2019
 
 ### 1 - Rodrigo Pádua | @rodrigoclp at 3:54 pm
-Pessoal, em caso de micro services com bases sql privadas, como fica a questão da integridade referencial? Ocorre a troca e armazenamento de primary keys? Em que momento é realizada verificação de existência, ou não, do registro? A exclusão de registro deve ser eliminada, passando apenas para inativações (paranoid delete)? Agradeço pelos esclarecimentos
+> Pessoal, em caso de micro services com bases sql privadas, como fica a questão da integridade referencial? Ocorre a troca e armazenamento de primary keys? Em que momento é realizada verificação de existência, ou não, do registro? A exclusão de registro deve ser eliminada, passando apenas para inativações (paranoid delete)? Agradeço pelos esclarecimentos
 
 ### 2 - @reply(1) - Danilo Bredaa | github.com/danilobreda at 4:49 pm
-A não exclusão de um registro fica em aberto pois depende da sua regra de negócio, eu recomendo nunca deletar um registro do banco para log :/ Apenas inativar :D
+> A não exclusão de um registro fica em aberto pois depende da sua regra de negócio, eu recomendo nunca deletar um registro do banco para log :/ Apenas inativar :D
 
 ### 3 @reply(1) - Danilo Bredaa | github.com/danilobreda at 4:51 pm
-Na questão de cada microservice ter seu banco de dados, é algo da base conceitual de microservices, E a chave primaria é armazenada no outro banco sim, é necessaria ter essa referencia! https://microservices.io/patterns/data/database-per-service.html
+> Na questão de cada microservice ter seu banco de dados, é algo da base conceitual de microservices, E a chave primaria é armazenada no outro banco sim, é necessaria ter essa referencia! https://microservices.io/patterns/data/database-per-service.html
 
 
 ### 4 - Rodrigo Pádua | @rodrigoclp at 4:52 pm
-ok(com o icone do polegar para cima)
+> ok(com o icone do polegar para cima)
 
 ### 5 - Danilo Bredaa | github.com/danilobreda at 4:53 pm
 Porem a complexidade aumenta e começa a ter a necessidade de realizar transações distribuidas o que, no final das contas, acaba que sendo superado pelo uso de SAGAS (por conta do teorema de CAP) https://microservices.io/patterns/data/saga.html
