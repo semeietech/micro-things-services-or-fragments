@@ -43,3 +43,60 @@ só uma pequena observação, você não precisa provisionar um servidor de banc
 ### 11 - reply(10) - Rodrigo Pádua | @rodrigoclp at 9:01 pm
 
 Mas não fica meio estranho uma base única? Acesso a disco é meio q o gargalo dos sistemas e se eu não "fraciono" a base, fica meio q serviços acessando uma base única q vai acabar se sobre carregando. Qual seria a solução nesse caso? Teria replicações de base com uma espécie de tow way data bind para atualização das réplicas?
+
+### 12 - reply(10) - Luiz Carlos Faria | @luizcarlosfaria at 9:36 pm
+
+Exato, quanto a serviços não há nenhuma restrição sobre compartilhar ou não bases.
+
+No entanto, se falarmos de microserviços, compartilhar base faz ele não ser um microserviço.
+
+### 13 - Alexandre Silva | @AlexandreSilvaDev at 9:38 pm
+
+Verdade, para microservices tem que separar totalmente, mesmo que seja necessária replicar o dado, cada microservice deve ser totalmente independente...
+
+### 14 - Danilo Breda | @github.com/danilobreda at 9:43 pm
+
+Existe a parte de separação lógica de banco de dados e fisico(servidor e instancias) sendo que os 2 casos necessarios para microservices. O lógico força a separaçao que cada microservice tem seu banco, impossivel executar join entre eles forçando assim o desaclopamento entre eles
+
+### 15 - Danilo Breda | @github.com/danilobreda at 9:43 pm
+
+Na questao fisica voce resolve o problema de um unico ponto de falha , caso o bd cair voce matou todos os microservices e ai pra que microservices correto? Esse é o ponto
+
+### 16 - Danilo Breda | @github.com/danilobreda at 9:44 pm
+
+Porem se pode começar com uma unica instancia de banco de dados fisico e banco de dados logico por api, pois essa separaçao futura ê facil de executar
+
+### 17 - Danilo Breda | @github.com/danilobreda at 9:45 pm
+Lembrando que aws aurora e cosmos db prega conceitos diferentes na questão física
+
+
+### 18 - Danilo Breda | @github.com/danilobreda at 9:46 pm
+Por serem DBaaS
+
+### 19 -  Danilo Breda | @github.com/danilobreda at 9:50 pm
+
+@AlexandreSilvaDev o aws aurora é considerado auto gerenciado? Tipo ele cria um ec2?
+
+### 20 -  Danilo Breda | @github.com/danilobreda at 9:50 pm
+O aws dynamodb eu sei que é
+
+### 21 - Marcelo Avancini | at 9:59 pm
+Existe o aurora serverless
+
+### 22 - Marcelo Avancini | at 10:00 pm
+Esse é auto gerenciado, diferente do aurora "tradicional" que você define as instâncias
+
+### 23 - reply(22) - Danilo Breda | @github.com/danilobreda at 10:00 pm
+Hum entendi nunca entendi mto bem o aws aurora :/
+
+### 24 - reply(13) - jeffotoni/GoLambdaMan | @jeffotoni at 10:19 pm
+Desculpa mas permite discordar ? Como dizia o Raul
+"Eu prefiro ser essa metamorfose ambulante. Do que ter aquela velha opinião formada sobre tudo"
+:joy::joy:
+
+### 25 - reply(12) -  jeffotoni/GoLambdaMan | @jeffotoni at 10:21 pm
+não necessariamente :grin:
+
+### 26 - jeffotoni/GoLambdaMan | @jeffotoni at 10:21 pm
+@AlexandreSilvaDev Nem vou colocar minha opinião só vou referenciar a do Chris Richardson que por sinal descreveu muito bem sobre este assunto aqui..
+![anexo com citação](./files/anexo-26.jpeg)
